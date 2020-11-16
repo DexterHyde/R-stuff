@@ -22,4 +22,5 @@ barplot(frecsEduca, main = "Frecuencias Relativas")
 
 #obtener categorias con menos del 20% de la frecuencia de los datos
 menosDel20 = frecsEduca[frecsEduca < 0.2]
+
 View(menosDel20)
