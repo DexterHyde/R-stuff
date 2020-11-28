@@ -1,0 +1,10 @@
+data = read.csv("directmail.csv")
+age = data$age
+breaks = seq(from = min(age), to = max(age), by = 2)
+cut = cut(data$age, breaks, right = FALSE)
+freq = table(cut)
+acumulada = cumsum(freq)
+frecRel = freq/nrow(data)
+acumrel = acumulada/nrow(data)
+todo = cbind(freq, frecRel, acumulada, acumrel)
+View(todo)
